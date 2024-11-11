@@ -1,5 +1,7 @@
 package GUVI_CLASSTASKS.Task3.Question2;
 
+// a. Create class Employee and implement Taxable to calculate income Tax on yearly salary
+
 public class Employee implements Taxable {
     int employeeID;
     String name;

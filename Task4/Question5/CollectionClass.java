@@ -1,11 +1,7 @@
 package GUVI_CLASSTASKS.Task4.Question5;
-
-import java.util.Collection;
 import java.util.Scanner;
 import java.util.Stack;
-
 public class CollectionClass {
-
     // a. to push elements into the stack
     void pushElements(Stack stack,int element){
         stack.push(element);
@@ -19,10 +15,8 @@ public class CollectionClass {
     }
 
     public static void main(String[] args) {
-
         CollectionClass col=new CollectionClass();
         Stack<Integer> stack=new Stack<>();
-
         Scanner obj=new Scanner(System.in);
 
         // a. to push elements into the stack
@@ -43,7 +37,7 @@ public class CollectionClass {
         if(stack.isEmpty()){
             System.out.println("Stack is empty");
         }else{
-            System.out.println("Stack has elements");
+            System.out.println("Stack is not empty. It has elements");
         }
         System.out.println(stack);
     }

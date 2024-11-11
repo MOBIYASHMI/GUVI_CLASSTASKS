@@ -56,12 +56,15 @@ public class Student{
         String name="Mobi@";
         // initialized values through constructor
         Student student=new Student(3,name,age,"java");
+
+        // If age is not between 15 and 21, then raise user defined exception "AgeNotWithinRangeException"
         try {
             student.checkAge();
         }catch (AgeNotWithinRangeException e) {
             System.out.println(e.getMessage());
         }
 
+        // If name contains numbers or special symbols raise "NameNotValidException" exception
         try {
             student.nameCheck();
         } catch (NameNotValidException e) {

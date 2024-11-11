@@ -2,6 +2,8 @@ package GUVI_CLASSTASKS.Task3.Question2;
 
 import java.util.Scanner;
 
+//c. Create main method, accept employee information and a product information from user and calculate tax respectively
+
 public class DriverMain {
     public static void main(String[] args) {
         Scanner obj=new Scanner(System.in);
@@ -15,6 +17,8 @@ public class DriverMain {
         double salary=obj.nextDouble();
 
         Taxable employee=new Employee(employeeID,name,salary);
+        System.out.println("Tax deducted = "+employee.calcTax());
+        System.out.println();
 
         // Product information
         System.out.println("Enter product ID : ");
@@ -26,10 +30,7 @@ public class DriverMain {
 
         Taxable product=new Product(productID,price,quantity);
 
-        System.out.println("Tax deducted = "+employee.calcTax());
         System.out.println("Taxable price per unit = "+product.calcTax());
-
-
 
     }
 }

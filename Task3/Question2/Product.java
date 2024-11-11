@@ -1,5 +1,7 @@
 package GUVI_CLASSTASKS.Task3.Question2;
 
+// b. Create class Product and implement Taxable to calculate sales Tax on unit price of product
+
 public class Product implements Taxable{
     int productID;
     double price;
@@ -13,9 +15,10 @@ public class Product implements Taxable{
 
     @Override
     public double calcTax() {
-        double unitPrice=price/quantity;
-        double unitPriceTax=unitPrice*(salesTax/100);
-        System.out.println("Unit price = "+unitPrice);
-        return unitPriceTax;
+        double salesTaxPrice=price*(salesTax/100);
+        double productPrice=price-salesTaxPrice;
+        System.out.println("Product price without tax = "+productPrice);
+        double salesTaxPerUnit=salesTaxPrice/quantity;
+        return salesTaxPerUnit;
     }
 }
